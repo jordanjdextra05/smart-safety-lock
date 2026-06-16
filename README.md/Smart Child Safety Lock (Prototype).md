@@ -49,7 +49,7 @@ Design and build a microcontroller-based system that:
 #### Key Roadblocks & Troubleshooting
 
 ##### 1. The Mechanical Connection Trap (The "Dead" LED)
-* **The Problem:** The ESP32 code compiled and uploaded with a `SUCCESS` status, and the onboard chip LED blinked, but the external blue LED on the breadboard remained completely dark. 
+* **The Problem:** The ESP32 code compiled and uploaded with a `SUCCESS` status, and the onboard chip LED blinked, but the external green LED on the breadboard remained completely dark. 
 * **The Diagnostics:** Systematically isolated variables by cross-referencing video tutorials, modifying code loop frequencies, and verifying PlatformIO framework paths. 
 * **The Resolution:** Discovered that the physical width of the ESP32 housing caused tight tolerances inside the breadboard channels. The microcontroller pins were hovering inside the plastic slots without seating deeply enough into the internal metal clips. Firmly pushing the chip completely flush with the board immediately restored electrical continuity, and the LED began blinking.
 * **Engineering Takeaway:** Sit patiently with hardware anomalies, don't panic, and always verify the simplest mechanical connections before over-complicating the software logic.
